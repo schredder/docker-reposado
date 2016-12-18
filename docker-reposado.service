@@ -1,0 +1,14 @@
+# /etc/systemd/system/docker-reposado.service
+[Unit]
+Description=reposado app container
+After=docker.service
+Requires=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker start --attach reposado
+ExecStop=/usr/bin/docker stop reposado
+RestartSec=5s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
