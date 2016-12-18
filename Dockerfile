@@ -7,7 +7,7 @@ ENV PATH /reposado/code:$PATH
 EXPOSE 8088
 
 RUN apt-get update \
-  && apt-get install -y curl python \
+  && apt-get install -y cron curl python \
   && apt-get clean \
   && mkdir -p /reposado/code /reposado/html /reposado/metadata \
   && curl -ksSL https://github.com/wdas/reposado/tarball/master | tar zx \
@@ -18,6 +18,10 @@ RUN apt-get update \
 COPY nginx.conf /etc/nginx/
 COPY preferences.plist /reposado/code/
 COPY reposado.conf /etc/nginx/sites-enabled/
+COPY repo_sync.cron /etc/cron.d/repo_sync
+COPY start.sh /reposado/code/
+
+CMD ["/reposado/code/start.sh"]
 
 RUN chown -R www-data:www-data /reposado \
   && chmod -R ug+rws /reposado
