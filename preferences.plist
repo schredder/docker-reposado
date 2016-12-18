@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>LocalCatalogURLBase</key>
-  <string></string>
+  <string>/reposado/html</string>
   <key>UpdatesMetadataDir</key>
   <string>/reposado/metadata</string>
   <key>UpdatesRootDir</key>

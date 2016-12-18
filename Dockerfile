@@ -1,6 +1,6 @@
 FROM nginx:1.7
-
-MAINTAINER Scott Blake "Scott.Blake@mail.wvu.edu"
+MAINTAINER Eric Schroeder "ess@eschro.com"
+# Forked from https://github.com/MScottBlake/docker-reposado
 
 ENV PATH /reposado/code:$PATH
 
