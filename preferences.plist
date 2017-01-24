@@ -3,10 +3,22 @@
 <plist version="1.0">
 <dict>
   <key>LocalCatalogURLBase</key>
-  <string>/reposado/html</string>
+  <string>http://murasaki.local:8088</string>
   <key>UpdatesMetadataDir</key>
   <string>/reposado/metadata</string>
   <key>UpdatesRootDir</key>
   <string>/reposado/html</string>
+  <key>AppleCatalogURLs</key>
+  <array>
+    <string>http://swscan.apple.com/content/catalogs/index.sucatalog</string>
+    <string>http://swscan.apple.com/content/catalogs/index-1.sucatalog</string>
+    <string>https://swscan.apple.com/content/catalogs/others/index-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog</string>
+    <string>https://swscan.apple.com/content/catalogs/others/index-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog</string>
+    <string>https://swscan.apple.com/content/catalogs/others/index-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog</string>
+  </array>
+  <key>HumanReadableSizes</key>
+  <true/>
+  <key>RepoSyncLogFile</key>
+  <string>/reposado/metadata/reposado_sync.log</string>
 </dict>
 </plist>
